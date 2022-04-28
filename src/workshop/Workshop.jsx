@@ -1,4 +1,5 @@
-import Hello from "./Hello"
+// import Hello from "./Hello"
+import Hello2 from "./Hello2"
 
 const Workshop = () => {
 
@@ -9,7 +10,8 @@ const Workshop = () => {
     return (
         <div>
             <h2>Workshop component</h2>
-            <Hello initialName="Ben" onCall={callback} />
+            {/* <Hello initialName="Ben" onCall={callback} /> */}
+            <Hello2/>
         </div>
     )
 }
