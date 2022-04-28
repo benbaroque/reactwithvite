@@ -7,7 +7,7 @@ const HW1 = () => {
   const [list, setList] = useState(initialList);
   const [name, setName] = useState('');
   const [count, setCount] = useState(0)
-
+  const [discount, setDisCount] = useState(0)
   function handleChange(event) {
     setName(event.target.value);
   }
@@ -15,17 +15,18 @@ const HW1 = () => {
   function handleAdd() {
     const newList = list.concat({ name });
     setList(newList);
-    setCount(newList.length);
+    setCount(newList.length-discount);
   }
 
   const handleToggle = (event) => {
     if(event.target.style.textDecoration === 'line-through') {
       event.target.style.textDecoration = 'none';
-
+      
+    setDisCount(discount-1);
     setCount(count+1);
     } else {
       event.target.style.textDecoration = 'line-through'
-
+    setDisCount(discount+1);
     setCount(count-1);
     }
   };
