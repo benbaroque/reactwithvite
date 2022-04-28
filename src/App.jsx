@@ -1,14 +1,15 @@
-import { Component } from 'react'
+// import { Component } from 'react'
+import { Component, useState } from 'react'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
   const message = "Hello Be1n22";
+  console.log("Render")
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>{message}</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
@@ -70,4 +71,4 @@ class AppClass extends Component {
   };
 }
 
-export default AppClass
+export default App
